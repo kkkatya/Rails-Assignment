@@ -1,0 +1,10 @@
+<% @companies.each do |company| %>
+	<div class="well">
+		<h1> <%= company.name %> </h1>
+		<p> Address: <%= company.address %>, <%= company.city %>, <%= company.country %> </p>
+		<p> Email: <%= company.email %> </p>
+		<p> Phone Number: <%= company.phone_number %> </p>
+		<%= link_to "Edit", edit_path(company), class: "btn btn-primary" %>
+	</div>
+<% end %>
+<%= link_to "Add New Company", 'companies/new', class: "btn btn-primary" %>
